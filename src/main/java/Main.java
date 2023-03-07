@@ -19,7 +19,8 @@ public class Main {
 
         //System.out.println("Testx" + studentDB.findById("45666"));
         try {
-            studentDB.findById("4356435");
+            System.out.println("ID found" + studentDB.findById("4566"));
+
         } catch (IOException e) {
             System.out.println("No output because" + e);
         }
