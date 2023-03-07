@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Arrays;
 
 public class StudentDB {
@@ -18,15 +19,19 @@ public class StudentDB {
         return students[random];
     }
 
-    public Student findById (String id) {
+    public Student findById (String id) throws IOException {
+
 
         for (int i = 0; i < students.length; i++) {
-            if (students[i].getId()==(id))
-            return students[i];
+
+                if (students[i].getId() == (id))
+                    return students[i];
+
+            }
+            throw new IOException("ID not found");
+
 
         }
-        return null;
-    }
 
     @Override
     public String toString() {

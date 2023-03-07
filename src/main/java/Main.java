@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student student1 = new Student("123", "Florian");
         Student student2 = new Student("456", "Matthias");
 
@@ -15,6 +17,11 @@ public class Main {
         System.out.println(studentDB.getAllStudents());
         System.out.println(studentDB.randomStudent());
 
-        System.out.println("Testx" + studentDB.findById("456"));
+        //System.out.println("Testx" + studentDB.findById("45666"));
+        try {
+            studentDB.findById("4356435");
+        } catch (IOException e) {
+            System.out.println("No output because" + e);
+        }
     }
 }
